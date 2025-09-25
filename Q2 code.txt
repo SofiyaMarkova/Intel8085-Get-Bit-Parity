@@ -1,0 +1,20 @@
+MVI C, 0x08
+
+LOOP: 
+RRC
+
+JC CARRY 
+
+AGAIN: 
+DCR C    
+JNZ LOOP
+JMP END1
+
+CARRY:   
+
+INX D 
+
+JMP AGAIN 
+
+END1:     
+HLT
